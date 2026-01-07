@@ -1,353 +1,306 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HCAA - Soluciones de Inteligencia Artificial y Automatización</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Google Fonts -->
+    <title>HCAA-IA | Automatización Inteligente para Negocios y Consultorios</title>
+
+    <!-- Design System Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.png" alt="HCAA Logo" height="50">
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container flex items-center justify-between">
+            <a href="#" class="nav-logo">
+                <img src="images/logo.png" alt="HCAA Logo" height="40" style="display: block;">
+                <!-- Fallback text if image missing -->
+                <span style="display:none">HCAA</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
+
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#problemas" class="nav-link">Problemas</a></li>
+                <li><a href="#soluciones" class="nav-link">Soluciones</a></li>
+                <li><a href="#beneficios" class="nav-link">Beneficios</a></li>
+                <li><a href="#contacto" class="btn btn-primary"
+                        style="padding: 8px 20px; font-size: 0.9rem;">Diagnóstico Gratuito</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn">
+                <i data-lucide="menu"></i>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#soluciones">Soluciones</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#proceso">Proceso</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#testimonios">Testimonios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nosotros">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn-cta-nav" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="hero-section">
+    <!-- Hero Section (The Hook) -->
+    <section id="inicio" class="section" style="padding-top: 140px; padding-bottom: 60px;">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title">Aumenta la eficiencia de tu negocio un 40% en solo 90 días con soluciones de Inteligencia Artificial</h1>
-                    <p class="hero-subtitle">Consultoría, automatización, y análisis de datos para PYMES, consultorios médicos, dentistas, profesionales independientes y empresas.</p>
-                    <a href="#contacto" class="btn btn-primary btn-lg btn-cta">Solicita tu sesión de estrategia gratuita ahora</a>
-                    <div class="hero-testimonial mt-4">
-                        <p class="testimonial-text"><i class="fas fa-quote-left"></i> Gracias a HC Advanced Automation S.A. de C.V., hemos optimizado nuestras operaciones y reducido costos un 30% en solo 60 días. <i class="fas fa-quote-right"></i></p>
+            <div class="grid grid-2 items-center" style="gap: var(--space-12);">
+                <div class="fade-up">
+                    <div class="hero-badge">
+                        <i data-lucide="zap" size="14"></i>
+                        <span>Tu negocio en piloto automático</span>
                     </div>
-                </div>
-                <div class="col-lg-6">
-                    <img src="images/hero-automation.jpg" alt="Automatización con IA" class="img-fluid rounded shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
+                    <h1 class="text-display" style="margin-bottom: var(--space-6);">
+                        Moderniza tu consultorio o negocio: <br>
+                        <span style="color: var(--color-primary);">Reduce gastos y recupera tu tiempo.</span>
+                    </h1>
+                    <p class="text-lead" style="margin-bottom: var(--space-8);">
+                        Implementamos asistentes virtuales y automatizaciones que atienden clientes, agendan citas y
+                        organizan tus procesos 24/7.
+                        <strong>Sin complicaciones técnicas.</strong> Tú te enfocas en lo importante, nosotros en la
+                        tecnología.
+                    </p>
+                    <div class="flex gap-4" style="flex-wrap: wrap;">
+                        <a href="#contacto" class="btn btn-primary">Solicita Diagnóstico Gratuito <i
+                                data-lucide="arrow-right" size="18"></i></a>
+                        <!-- <a href="#demo" class="btn btn-outline">Ver Demo en Vivo</a> -->
+                    </div>
 
-    <!-- Problem Section -->
-    <section id="problema" class="problem-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">¿Estás enfrentando altos costos operativos, falta de escalabilidad y dificultades para gestionar grandes volúmenes de datos?</h2>
-                    <div class="problem-content mt-5">
-                        <p class="lead">Si sigues en el mismo camino, podrías perder clientes y oportunidades clave. La competencia avanza rápidamente y la digitalización es crucial para tu crecimiento.</p>
-                        <div class="alert-box mt-4">
-                            <p class="alert-text"><strong>No es la IA quien te reemplazará, sino la persona que la domina.</strong></p>
-                            <p class="alert-text">En 2027, la IA será el estándar empresarial. Implementa ahora o enfréntate a una desventaja total.</p>
+                    <div style="margin-top: var(--space-8); display: flex; align-items: center; gap: var(--space-4);">
+                        <div class="flex">
+                            <i data-lucide="star" size="20" fill="#F59E0B" color="#F59E0B"></i>
+                            <i data-lucide="star" size="20" fill="#F59E0B" color="#F59E0B"></i>
+                            <i data-lucide="star" size="20" fill="#F59E0B" color="#F59E0B"></i>
+                            <i data-lucide="star" size="20" fill="#F59E0B" color="#F59E0B"></i>
+                            <i data-lucide="star" size="20" fill="#F59E0B" color="#F59E0B"></i>
                         </div>
-                        <a href="#contacto" class="btn btn-primary btn-lg btn-cta mt-4">No dejes pasar esta oportunidad. Solicita tu sesión estratégica ahora</a>
+                        <p class="text-lead" style="font-size: 0.9rem; margin: 0;">Tecnología accesible probada.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Solutions Section -->
-    <section id="soluciones" class="solutions-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Nuestra Solución</h2>
-                    <p class="section-subtitle">Transformamos tu negocio con tecnología de vanguardia</p>
-                </div>
-            </div>
-            
-            <div class="row mb-5">
-                <div class="col-lg-4 mb-4">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Implementación Rápida</h3>
-                        <p>Implementación rápida de herramientas de automatización adaptadas a tus necesidades específicas.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Consultoría en IA</h3>
-                        <p>Consultoría en IA para una transición sin fricciones y máximo aprovechamiento de la tecnología.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <div class="solution-card">
-                        <div class="solution-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Capacitación Personalizada</h3>
-                        <p>Capacitación personalizada y adaptación a tus necesidades para garantizar el éxito.</p>
-                    </div>
-                </div>
-            </div>
+                <div class="fade-up stagger-1" style="position: relative;">
+                    <!-- Image: Relaxed Business Owner / Clean Chat Interface -->
+                    <img src="images/hero-automation.jpg" alt="Dueño de negocio feliz usando celular"
+                        style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); object-fit: cover; height: 100%; max-height: 500px;">
 
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <h3 class="text-center mb-4">Beneficios Clave</h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Aumento de la Eficiencia</h4>
-                                    <p>Incrementa la eficiencia un 40% en 90 días mediante automatización inteligente.</p>
-                                </div>
+                    <!-- Floating Badge: Lead Capture / Activity -->
+                    <div
+                        style="position: absolute; bottom: 40px; right: -20px; background: white; padding: 16px; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); max-width: 240px;">
+                        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 8px;">
+                            <div style="background: #D1FAE5; padding: 6px; border-radius: 50%;">
+                                <i data-lucide="message-circle" color="#059669" size="16"></i>
                             </div>
+                            <p style="font-weight: 700; font-size: 0.9rem;">Nueva Cita Agendada</p>
                         </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-dollar-sign"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Reducción de Costos</h4>
-                                    <p>Reducción de costos operativos y optimización de procesos empresariales.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-cogs"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Automatización de Tareas Repetitivas</h4>
-                                    <p>La IA se encarga de tareas rutinarias como programar citas, responder preguntas frecuentes o clasificar documentos.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Aumento de Precisión</h4>
-                                    <p>Los algoritmos analizan grandes volúmenes de datos identificando patrones y anomalías para mejores decisiones.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-user-check"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Personalización del Cliente</h4>
-                                    <p>Analiza el historial y preferencias de cada cliente para ofrecer productos y servicios altamente individualizados.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <div class="benefit-content">
-                                    <h4>Ventaja Competitiva</h4>
-                                    <p>El uso de IA proyecta una imagen de vanguardia y posiciona tu negocio por encima de la competencia.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <p style="font-size: 0.8rem; color: var(--color-text-muted);">Tu asistente virtual acaba de
+                            confirmar una cita para mañana a las 10am.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="proceso" class="process-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Nuestro Proceso</h2>
-                    <p class="section-subtitle">Pasos simples y claros hacia el éxito</p>
+    <!-- Social Proof / Authority -->
+    <section class="section"
+        style="padding: 20px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); background-color: #F8FAFC;">
+        <div class="container text-center">
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 16px; font-weight: 600;">
+                POTENCIADO POR TECNOLOGÍA SEGURA DE LÍDERES MUNDIALES</p>
+            <div class="flex justify-center gap-8 items-center" style="opacity: 0.6; flex-wrap: wrap;">
+                <!-- Simple Text Reps for logos to keep it clean if no SVGs available immediately, user can replace later -->
+                <div style="font-family: sans-serif; font-weight: 700; font-size: 1.2rem; color: #555;">OpenAI</div>
+                <div style="font-family: sans-serif; font-weight: 700; font-size: 1.2rem; color: #555;">Google Cloud
                 </div>
+                <div style="font-family: sans-serif; font-weight: 700; font-size: 1.2rem; color: #555;">Microsoft Azure
+                </div>
+                <div style="font-family: sans-serif; font-weight: 700; font-size: 1.2rem; color: #555;">n8n</div>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="process-timeline">
-                        <div class="process-step">
-                            <div class="process-number">1</div>
-                            <div class="process-content">
-                                <h3>Reunión de Diagnóstico</h3>
-                                <p>Entendemos tu negocio y objetivos para diseñar la mejor estrategia.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">2</div>
-                            <div class="process-content">
-                                <h3>Estrategia Personalizada</h3>
-                                <p>Diseñamos un plan único adaptado específicamente a tus necesidades.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">3</div>
-                            <div class="process-content">
-                                <h3>Implementación y Capacitación</h3>
-                                <p>Llevamos la solución a la práctica con capacitación completa para tu equipo.</p>
-                            </div>
-                        </div>
-                        <div class="process-step">
-                            <div class="process-number">4</div>
-                            <div class="process-content">
-                                <h3>Resultados Medibles</h3>
-                                <p>Vemos juntos cómo mejora tu negocio con métricas claras y resultados tangibles.</p>
-                            </div>
-                        </div>
+        </div>
+    </section>
+
+    <!-- Problem Section (Agitation) -->
+    <section id="problemas" class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 64px auto;">
+                <h2 class="text-h2" style="margin-bottom: var(--space-4);">No dejes que la operación te consuma</h2>
+                <p class="text-lead">Si te sientes identificado con estas situaciones, tu negocio está listo para el
+                    siguiente nivel.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card fade-up" style="border-left: 4px solid #EF4444;">
+                    <div style="margin-bottom: var(--space-4); color: #EF4444;">
+                        <i data-lucide="clock" size="32"></i>
                     </div>
+                    <h3 class="text-h3">¿Pierdes clientes por no contestar rápido?</h3>
+                    <p style="margin-top: var(--space-2); color: var(--color-text-muted);">
+                        El cliente actual no espera. Si no respondes en minutos, se va con la competencia.
+                    </p>
+                </div>
+
+                <div class="card fade-up stagger-1" style="border-left: 4px solid #EF4444;">
+                    <div style="margin-bottom: var(--space-4); color: #EF4444;">
+                        <i data-lucide="file-warning" size="32"></i>
+                    </div>
+                    <h3 class="text-h3">¿Desperdicias horas en tareas repetitivas?</h3>
+                    <p style="margin-top: var(--space-2); color: var(--color-text-muted);">
+                        Facturación manual, recordar citas, actualizar inventarios... tareas que no aportan valor
+                        estratégico.
+                    </p>
+                </div>
+
+                <div class="card fade-up stagger-2" style="border-left: 4px solid #EF4444;">
+                    <div style="margin-bottom: var(--space-4); color: #EF4444;">
+                        <i data-lucide="user-x" size="32"></i>
+                    </div>
+                    <h3 class="text-h3">¿Tu negocio depende 100% de ti?</h3>
+                    <p style="margin-top: var(--space-2); color: var(--color-text-muted);">
+                        Si no estás presente, las cosas no suceden. Es hora de delegar en sistemas que no duermen.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Support Section -->
-    <section id="soporte" class="support-section">
+    <!-- Solution Section (Digital Employees) -->
+    <section id="soluciones" class="section" style="background-color: var(--color-surface);">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="images/consultation.jpg" alt="Soporte continuo" class="img-fluid rounded shadow">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto 64px auto;">
+                <h2 class="text-h2" style="margin-bottom: var(--space-4);">Tus Nuevos "Empleados Digitales"</h2>
+                <p class="text-lead">No vendemos software complicado. Integramos asistentes que trabajan por ti.
+                    Nosotros lo instalamos, tú solo disfrutas los resultados.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <!-- Consultorios -->
+                <div class="card fade-up">
+                    <div class="icon-box" style="background-color: #E0F2FE; color: #0284C7;">
+                        <i data-lucide="stethoscope"></i>
+                    </div>
+                    <h3>Para Consultorios Médicos y Dentales</h3>
+                    <p style="margin-top: var(--space-4); margin-bottom: var(--space-4); font-weight: 500;">
+                        "Un recepcionista que nunca duerme."
+                    </p>
+                    <ul
+                        style="color: var(--color-text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Agenda pacientes automáticamente.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Envía recordatorios por WhatsApp.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Reduce drásticamente el ausentismo.</li>
+                    </ul>
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title">Soporte Continuo y Capacitación Personalizada</h2>
-                    <p class="lead">Implementación sin fricciones y soporte continuo para el éxito</p>
-                    <p>En HCAA, brindamos capacitación y soporte continuo para garantizar que tu equipo obtenga el máximo rendimiento de las soluciones de IA implementadas.</p>
-                    <ul class="support-list">
-                        <li><i class="fas fa-check-circle"></i> Capacitación inicial y continua</li>
-                        <li><i class="fas fa-check-circle"></i> Soporte técnico post-implementación</li>
-                        <li><i class="fas fa-check-circle"></i> Optimización constante para mejorar el funcionamiento con el tiempo</li>
+
+                <!-- Profesionistas -->
+                <div class="card fade-up stagger-1">
+                    <div class="icon-box" style="background-color: #F3E8FF; color: #9333EA;">
+                        <i data-lucide="briefcase"></i>
+                    </div>
+                    <h3>Para Contadores, Abogados y Arquitectos</h3>
+                    <p style="margin-top: var(--space-4); margin-bottom: var(--space-4); font-weight: 500;">
+                        "Tu asistente administrativo personal."
+                    </p>
+                    <ul
+                        style="color: var(--color-text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Clasifica y responde correos.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Redacta borradores de documentos.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Organiza tus archivos automáticamente.</li>
+                    </ul>
+                </div>
+
+                <!-- Comercios -->
+                <div class="card fade-up stagger-2">
+                    <div class="icon-box" style="background-color: #DCFCE7; color: #16A34A;">
+                        <i data-lucide="shopping-bag"></i>
+                    </div>
+                    <h3>Para Retail y Pequeño Comercio</h3>
+                    <p style="margin-top: var(--space-4); margin-bottom: var(--space-4); font-weight: 500;">
+                        "Un vendedor estrella disponible 24/7."
+                    </p>
+                    <ul
+                        style="color: var(--color-text-muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 8px;">
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Atiende dudas por WhatsApp al instante.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Toma pedidos de forma automática.</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" size="16"
+                                color="var(--color-primary)"></i> Gestión simple de inventarios.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonios" class="testimonials-section">
+    <!-- Benefits Section (ROI) -->
+    <section id="beneficios" class="section">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
-                    <p class="section-subtitle">Resultados reales de empresas reales</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-user-md"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Dr. Laura Pérez</h4>
-                                <p>Clínica Dental SmileCare</p>
-                            </div>
+            <div class="grid grid-2 items-center" style="gap: var(--space-12);">
+                <div class="fade-up">
+                    <h2 class="text-h2" style="margin-bottom: var(--space-6);">Beneficios Tangibles</h2>
+                    <p class="text-lead" style="margin-bottom: var(--space-8);">
+                        La inversión en automatización se paga sola al recuperar tiempo y captar oportunidades perdidas.
+                    </p>
+
+                    <div class="grid grid-2" style="gap: var(--space-6);">
+                        <div
+                            style="background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <div
+                                style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">
+                                -40%</div>
+                            <p style="font-weight: 600;">Reducción de Costos</p>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">En gastos operativos
+                                administrativos.</p>
                         </div>
-                        <div class="testimonial-body">
-                            <p><i class="fas fa-quote-left"></i> Desde que implementamos la solución de Inteligencia Artificial de HCAA, hemos optimizado nuestras operaciones y reducido un 25% los costos operativos. <i class="fas fa-quote-right"></i></p>
+                        <div
+                            style="background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <div
+                                style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">
+                                +20h</div>
+                            <p style="font-weight: 600;">Ahorro Semanal</p>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Horas manuales liberadas para
+                                ti.</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-industry"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Luis García</h4>
-                                <p>ABC Manufacturas</p>
-                            </div>
+                        <div
+                            style="background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <div
+                                style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">
+                                x3</div>
+                            <p style="font-weight: 600;">Conversión</p>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Al responder en segundos, no
+                                horas.</p>
                         </div>
-                        <div class="testimonial-body">
-                            <p><i class="fas fa-quote-left"></i> Gracias a la consultoría y las herramientas de IA implementadas, hemos logrado aumentar nuestra eficiencia en un 40% en solo 3 meses. <i class="fas fa-quote-right"></i></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-stethoscope"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Dr. Enrique Soto</h4>
-                                <p>Consultorio Médico</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <p><i class="fas fa-quote-left"></i> La implementación de IA en nuestro consultorio fue mucho más fácil de lo que imaginábamos. La solución nos ayudó a automatizar las tareas administrativas. <i class="fas fa-quote-right"></i></p>
+                        <div
+                            style="background: white; padding: 24px; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+                            <div
+                                style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary); margin-bottom: 8px;">
+                                24/7</div>
+                            <p style="font-weight: 600;">Disponibilidad</p>
+                            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Tu negocio sigue vendiendo
+                                mientras duermes.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="testimonial-card">
-                        <div class="testimonial-header">
-                            <div class="testimonial-avatar">
-                                <i class="fas fa-store"></i>
-                            </div>
-                            <div class="testimonial-info">
-                                <h4>Mariana López</h4>
-                                <p>Tienda Retail X</p>
-                            </div>
-                        </div>
-                        <div class="testimonial-body">
-                            <p><i class="fas fa-quote-left"></i> Nos enfrentábamos a problemas de escalabilidad. Con la implementación de IA, no solo automatizamos las ventas y el servicio al cliente, sino que también logramos hacer un análisis predictivo. <i class="fas fa-quote-right"></i></p>
+
+                <div class="fade-up stagger-1">
+                    <!-- Clean minimal visual or chart placeholder -->
+                    <div
+                        style="background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-bg) 100%); padding: 40px; border-radius: 24px; position: relative;">
+                        <img src="images/consultation.jpg" alt="Crecimiento de Negocio"
+                            style="border-radius: var(--radius-md); box-shadow: var(--shadow-lg); width: 100%;">
+                        <div
+                            style="background: var(--color-primary); color: white; padding: 20px; border-radius: 12px; position: absolute; bottom: -20px; left: 20px; max-width: 250px; box-shadow: var(--shadow-lg);">
+                            <p style="font-weight: 700; margin-bottom: 4px;">"No sabía usar esto"</p>
+                            <p style="font-size: 0.9rem; opacity: 0.9;">"HCAA lo instaló todo y ahora mi consultorio se
+                                gestiona solo. Fue más fácil de lo que pensé."</p>
                         </div>
                     </div>
                 </div>
@@ -355,97 +308,98 @@
         </div>
     </section>
 
-    <!-- Case Studies Section -->
-    <section id="casos-estudio" class="case-studies-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Casos de Estudio</h2>
-                    <p class="section-subtitle">Proyectos exitosos que transformaron negocios</p>
+    <!-- Contact Form Section (Lead Magnet) -->
+    <section id="contacto" class="section"
+        style="background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-primary-light) 100%);">
+        <div class="container container-sm">
+            <div class="text-center" style="margin-bottom: var(--space-8);">
+                <h2 class="text-h2">Solicita tu Diagnóstico de Automatización</h2>
+                <p class="text-lead" style="margin: 0 auto; margin-bottom: 16px;">
+                    Descubre exactamente cuánto dinero estás perdiendo en tareas repetitivas y cómo solucionarlo.
+                </p>
+                <div
+                    style="display: inline-block; background: #FEF3C7; color: #D97706; padding: 8px 16px; border-radius: 20px; font-weight: 600; font-size: 0.9rem;">
+                    🎁 Incluye Demo Gratuita de Agente IA
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="case-study-card">
-                        <img src="images/manufacturing.jpg" alt="ABC Manufacturas" class="case-study-image">
-                        <div class="case-study-content">
-                            <h3>ABC Manufacturas</h3>
-                            <p class="case-study-description">Implementación de IA para optimización de producción y reducción de costos operativos.</p>
-                            <blockquote class="case-study-quote">
-                                <i class="fas fa-quote-left"></i> La implementación de IA nos permitió ser más ágiles y rentables. <i class="fas fa-quote-right"></i>
-                                <footer>— Luis García</footer>
-                            </blockquote>
+
+            <div class="form-container fade-up">
+                <form id="contactForm">
+                    <!-- Hidden Date Field -->
+                    <input type="hidden" id="fecha_envio" name="fecha_envio">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="name">Nombre</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Tu nombre"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="last_name">Apellido</label>
+                            <input type="text" id="last_name" name="last_name" class="form-input"
+                                placeholder="Tu apellido" required>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="case-study-card">
-                        <img src="images/medical-office.jpg" alt="Consultorio Dr. Soto" class="case-study-image">
-                        <div class="case-study-content">
-                            <h3>Consultorio Médico Dr. Soto</h3>
-                            <p class="case-study-description">Sistema de automatización de citas y gestión de pacientes.</p>
-                            <blockquote class="case-study-quote">
-                                <i class="fas fa-quote-left"></i> El sistema ha revolucionado la forma en que trabajamos. Nuestros pacientes están más contentos y hemos incrementado nuestra capacidad de atención. <i class="fas fa-quote-right"></i>
-                                <footer>— Dr. Enrique Soto</footer>
-                            </blockquote>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email de Contacto</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="nombre@empresa.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">WhatsApp / Teléfono</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+52 ..." required>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="nosotros" class="about-section">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Quiénes Somos – HCAA: Expertos en Automatización Industrial</h2>
-                </div>
-            </div>
-            
-            <div class="row align-items-center mb-5">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <img src="images/business-growth.jpg" alt="HCAA Team" class="img-fluid rounded shadow">
-                </div>
-                <div class="col-lg-6">
-                    <p class="lead">En HCAA, contamos con más de 20 años de experiencia ofreciendo soluciones integrales de automatización industrial a sectores clave como automotriz, farmacéutico, energético, logística y manufactura.</p>
-                    <p>Nos especializamos en la integración de líneas de producción, robótica industrial, programación de PLC, y automatización IoT.</p>
-                    <p>Nuestro enfoque está en mejorar la eficiencia operativa, reducir los costos de producción y aumentar la productividad de las empresas mediante soluciones personalizadas y tecnológicas de vanguardia.</p>
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-lg-10 mx-auto">
-                    <div class="about-highlight">
-                        <h3>Pioneros en Inteligencia Artificial</h3>
-                        <p>En los últimos 3 años, hemos sido pioneros en la implementación de modelos de inteligencia artificial (IA), ayudando a profesionales independientes, pequeños consultorios, consultorios dentales, médicos y empresas en sectores como automotriz y textil.</p>
-                        <p>Nuestra experiencia en IA ha permitido la automatización de procesos, la optimización de la gestión de datos y la implementación de modelos predictivos, lo que ha mejorado la eficiencia y productividad de nuestros clientes.</p>
-                        <p>HCAA se ha consolidado como un aliado clave para quienes buscan integrar IA de manera eficiente en sus operaciones, desde pequeñas consultas hasta grandes empresas. Nos enorgullece poder ofrecer soluciones de IA accesibles y escalables, adaptadas a las necesidades específicas de cada cliente.</p>
-                        <p class="text-center mt-4">
-                            <a href="https://www.hcaa.com.mx" target="_blank" class="btn btn-outline-primary">Visita nuestra página web</a>
-                        </p>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="position">Puesto</label>
+                            <input type="text" id="position" name="position" class="form-input"
+                                placeholder="Ej. Dueño, Gerente...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="company">Negocio / Consultorio</label>
+                            <input type="text" id="company" name="company" class="form-input"
+                                placeholder="Nombre de tu negocio">
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section (Updated) -->
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-center">
-                    <h2 class="section-title">Agenda tu Prueba Funcional Gratuita</h2>
-                    <p class="section-subtitle">Enviamos un correo o mándanos un mensaje a nuestros números de contacto, para agendar tu prueba funcional gratuita, con gusto te atenderemos.</p>
-                    
-                    <div class="contact-info-box mt-5">
-                        <p class="contact-detail"><i class="fas fa-envelope"></i> Correo Electrónico: <a href="mailto:dejesus.antonio@hcaa.com.mx">dejesus.antonio@hcaa.com.mx</a></p>
-                        <p class="contact-detail"><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/522227896404" target="_blank">+ 52 222 789 6404</a></p>
+                    <div class="form-group">
+                        <label class="form-label" for="pain">¿Cuál es tu mayor obstáculo hoy?</label>
+                        <select id="pain" name="pain" class="form-select">
+                            <option value="" disabled selected>Selecciona una opción...</option>
+                            <option value="tiempo">Pierdo mucho tiempo en tareas manuales</option>
+                            <option value="clientes">No alcanzo a responder a todos mis clientes</option>
+                            <option value="agenda">Tengo problemas con la agenda / ausentismo</option>
+                            <option value="ventas">Quiero vender más automáticamente</option>
+                            <option value="otro">Otro</option>
+                        </select>
                     </div>
-                    
-                    <a href="mailto:dejesus.antonio@hcaa.com.mx" class="btn btn-primary btn-lg btn-cta mt-4">Enviar Correo Ahora</a>
+
+                    <button type="submit" class="btn btn-primary"
+                        style="width: 100%; justify-content: center; margin-top: var(--space-4); font-size: 1.1rem; padding: 16px;">
+                        Quiero mi Diagnóstico Gratis <i data-lucide="sparkles" size="18"></i>
+                    </button>
+                    <p style="text-align: center; margin-top: 12px; font-size: 0.8rem; color: var(--color-text-muted);">
+                        Sin compromiso. Implementación paso a paso.</p>
+                </form>
+
+                <div id="formSuccess" style="display: none; text-align: center; padding: 40px 20px; color: #10B981;">
+                    <div
+                        style="background: #D1FAE5; width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">
+                        <i data-lucide="check" size="40" color="#059669"></i>
+                    </div>
+                    <h3 style="font-size: 1.5rem; color: var(--color-text-main); margin-bottom: 10px;">¡Solicitud
+                        Recibida!</h3>
+                    <p style="color: var(--color-text-muted);">Analizaremos tu caso y te contactaremos por WhatsApp o
+                        Correo en breve para agendar tu diagnóstico.</p>
+                </div>
+                <div id="formError" style="display: none; text-align: center; padding: 20px; color: #EF4444;">
+                    <i data-lucide="alert-circle" size="48" style="margin: 0 auto 10px auto;"></i>
+                    <h3>Error</h3>
+                    <p>Hubo un problema al enviar. Por favor intenta de nuevo.</p>
                 </div>
             </div>
         </div>
@@ -454,69 +408,52 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <img src="images/logo.png" alt="HCAA Logo" height="50" class="mb-3">
-                    <p>HC Advanced Automation S.A de C.V</p>
-                    <p>Soluciones integrales de automatización e inteligencia artificial</p>
+            <div class="grid grid-3" style="gap: var(--space-12);">
+                <div>
+                    <h5 class="footer-logo">HCAA-IA</h5>
+                    <p class="footer-text">Democratizando la Inteligencia Artificial para PyMEs y Consultorios.</p>
+                    <div class="flex gap-4" style="margin-top: var(--space-4);">
+                        <!-- Socials -->
+                    </div>
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
-                    <h5>Contacto</h5>
-                    <ul class="footer-contact">
-                        <li><i class="fas fa-user"></i> Jose Antonio De Jesus Galicia</li>
-                        <li><i class="fas fa-phone"></i> MX: +52 222 789 6404</li>
-                        <li><i class="fas fa-phone"></i> USA: +1 423 803 8252</li>
-                        <li><i class="fas fa-envelope"></i> dejesus.antonio@hcaa.com.mx</li>
+
+                <div>
+                    <h5 style="margin-bottom: var(--space-4); font-weight: 700;">Contacto</h5>
+                    <ul style="display: flex; flex-direction: column; gap: 8px;">
+                        <li class="footer-text"><strong>MX:</strong> +52 222 789 6404</li>
+                        <li class="footer-text"><strong>USA:</strong> +1 423 803 8252</li>
+                        <li class="footer-text">dejesus.antonio@hcaa.com.mx</li>
                     </ul>
                 </div>
-                <div class="col-lg-4">
-                    <h5>Dirección</h5>
-                    <p>
-                        <i class="fas fa-map-marker-alt"></i> Priv. F del 16 de septiembre poniente 12953<br>
+
+                <div>
+                    <h5 style="margin-bottom: var(--space-4); font-weight: 700;">Ubicación</h5>
+                    <p class="footer-text">
+                        Priv. F del 16 de septiembre poniente 12953<br>
                         Col. Guadalupe Hidalgo<br>
                         Puebla, Puebla, México
                     </p>
                 </div>
             </div>
-            <hr class="footer-divider">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="footer-copyright">&copy; 2024 HC Advanced Automation S.A de C.V. Todos los derechos reservados.</p>
-                </div>
+
+            <div
+                style="margin-top: var(--space-12); padding-top: var(--space-8); border-top: 1px solid rgba(0,0,0,0.05); text-align: center;">
+                <p class="footer-text">&copy; 2026 HC Advanced Automation S.A de C.V.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Chatbot Widget -->
-    <div id="chatbot-widget" class="chatbot-widget">
-        <div class="chatbot-button" id="chatbotButton">
-            <i class="fas fa-comments"></i>
-        </div>
-        <div class="chatbot-window" id="chatbotWindow" style="display: none;">
-            <div class="chatbot-header">
-                <h5>Asistente Virtual HCAA</h5>
-                <button class="chatbot-close" id="chatbotClose">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            <div class="chatbot-body" id="chatbotBody">
-                <div class="chatbot-message bot-message">
-                    <p>¡Hola! Soy el asistente virtual de HCAA. ¿En qué puedo ayudarte hoy?</p>
-                </div>
-            </div>
-            <div class="chatbot-footer">
-                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escribe tu mensaje...">
-                <button id="chatbotSend" class="chatbot-send">
-                    <i class="fas fa-paper-plane"></i>
-                </button>
-            </div>
-        </div>
-    </div>
+    <!-- Floating WhatsApp Button (Mobile First) -->
+    <a href="https://wa.me/522227896404" target="_blank"
+        style="position: fixed; bottom: 20px; right: 20px; background-color: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 9999; transition: transform 0.3s ease;">
+        <i data-lucide="message-circle" size="32" fill="white"></i>
+    </a>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Custom JS -->
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
