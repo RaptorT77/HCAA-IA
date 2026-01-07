@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     mobileBtn.addEventListener('click', () => {
         const isFlex = navLinks.style.display === 'flex';
-        
+
         if (isFlex) {
             navLinks.style.display = 'none';
         } else {
@@ -74,10 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Format: YYYY/MM/DD HH:MM
             // Or use simplified ISO, user asked for 'aaaa/mm/dd'
             // Let's provide a clear string
-            dateField.value = now.getFullYear() + '/' + 
-                              String(now.getMonth() + 1).padStart(2, '0') + '/' + 
-                              String(now.getDate()).padStart(2, '0') + ' ' +
-                              now.toLocaleTimeString();
+            dateField.value = now.getFullYear() + '/' +
+                String(now.getMonth() + 1).padStart(2, '0') + '/' +
+                String(now.getDate()).padStart(2, '0') + ' ' +
+                now.toLocaleTimeString();
 
             // 2. Gather Data
             const formData = new FormData(form);
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateBtn.innerHTML = 'Enviando...';
 
             // 3. Send to Webhook
-            const WEBHOOK_URL = 'https://n8n.hcaa-ia.cloud/webhook-test/99267fac-2f0a-4908-9c2d-ab6cb26ce60e';
+            const WEBHOOK_URL = 'https://n8n.hcaa-ia.cloud/webhook/99267fac-2f0a-4908-9c2d-ab6cb26ce60e';
 
             try {
                 const response = await fetch(WEBHOOK_URL, {
