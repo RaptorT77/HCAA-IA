@@ -71,23 +71,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 1. Set Date
             const now = new Date();
-            // Format: YYYY/MM/DD HH:MM
-            // Or use simplified ISO, user asked for 'aaaa/mm/dd'
-            // Let's provide a clear string
-            dateField.value = now.getFullYear() + '/' +
-                String(now.getMonth() + 1).padStart(2, '0') + '/' +
-                String(now.getDate()).padStart(2, '0') + ' ' +
-                now.toLocaleTimeString();
+            dateField.value = now.toLocaleString('es-MX', {
+                timeZone: 'America/Mexico_City',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            }).replace(',', '');
 
             // 2. Gather Data
             const formData = new FormData(form);
             const data = Object.fromEntries(formData.entries());
-
-            // Disable button
-            const updateBtn = form.querySelector('button[type="submit"]');
-            const originalBtnText = updateBtn.innerHTML;
-            updateBtn.disabled = true;
-            updateBtn.innerHTML = 'Enviando...';
 
             // 3. Send to Webhook
             const WEBHOOK_URL = 'https://n8n.hcaa-ia.cloud/webhook/99267fac-2f0a-4908-9c2d-ab6cb26ce60e';
@@ -97,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json'
                     },
                     body: JSON.stringify(data)
                 });
@@ -106,12 +104,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     form.style.display = 'none';
                     successMsg.style.display = 'block';
                 } else {
-                    throw new Error('Network response was not ok');
+                    throw new Error(`Error del Servidor: ${response.status}`);
                 }
 
             } catch (error) {
                 console.error('Error:', error);
                 errorMsg.style.display = 'block';
+                errorMsg.querySelector('p').innerText = `Detalle del error: ${error.message}`;
+
                 // Re-enable button
                 updateBtn.disabled = false;
                 updateBtn.innerHTML = originalBtnText;
